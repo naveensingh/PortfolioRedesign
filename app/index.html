@@ -12,9 +12,10 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <!--<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic' rel='stylesheet' type='text/css'>-->
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/jquery.js"></script>
     <!--<link rel="stylesheet" href="styles/animate.css">-->
     <!-- endbuild -->
   </head>
@@ -24,14 +25,14 @@
       <span class="middle"></span>
       <span class="bottom"></span>
     </div>
-    <span class="logo"><h2><a href="#/">NS</a></h2></span>
+
     <div class="overlay" id="overlay">
       <nav class="overlay-menu">
         <ul>
           <li ><a onclick="HideNav()" href="#/">Home</a></li>
           <li><a onclick="HideNav()" href="#/about">About</a></li>
-          <li><a href="#/work">Work</a></li>
-          <li><a href="#/contact">Contact</a></li>
+          <li><a onclick="HideNav()" href="#/work">Work</a></li>
+          <li><a onclick="HideNav()" href="#/contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -68,10 +69,10 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/jquery.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/work.js"></script>
         <script>
           $('#toggle').click(function() {
             $(this).toggleClass('active');
@@ -82,6 +83,9 @@
             $('#toggle').removeClass('active');
           }
         </script>
+
         <!-- endbuild -->
+
+        <!--&lt;!&ndash; endbuild &ndash;&gt;-->
 </body>
 </html>

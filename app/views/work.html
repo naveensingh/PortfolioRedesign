@@ -1,0 +1,62 @@
+<div class="main-intro about">
+  <div class="home-inner">
+    <h1>Work</h1>
+    <div class="clearfix screens">
+      <div class="width-70" id="content-right">
+        <div class="work-inner">
+          <img id="image1" class="active" src="http://kulfie.co/assets/img/1.png">
+          <img id="image2" class="deactivated" src="http://kulfie.co/assets/img/2.png">
+          <img id="image3" class="deactivated" src="http://kulfie.co/assets/img/3.png">
+        </div>
+      </div>
+      <div class="width-30" id="content-left">
+        <div class="work-inner">
+          <div id="tab1" class="tab active clearfix">
+            <h5><i class="fa fa-star"></i> AmarTravels</h5>
+            <p>Product landing pages for this travel agent built in wordpress.</p>
+          </div>
+          <div id="tab2" class="tab clearfix">
+            <h5><i class="fa fa-star"></i> Rockstar Of Design</h5>
+            <p>A national level design competition, the following was my submission which won the second place.</p>
+          </div>
+          <div id="tab3" class="tab clearfix">
+            <h5><i class="fa fa-star"></i> KisanHub</h5>
+            <p>Worked on the front-end design of both the landing pages as well as the farm dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  $("#tab1").click(function() {
+    $('#image1').removeClass('deactivated');
+    $('#image2').addClass('deactivated');
+    $('#image3').addClass('deactivated');
+    $(this).addClass('active');
+    $('#tab2').removeClass('active');
+    $('#tab3').removeClass('active');
+  });
+
+  $("#tab2").click(function() {
+    $('#image1').addClass('deactivated');
+    $('#image1').removeClass('active');
+    $('#image2').removeClass('deactivated');
+    $('#image3').addClass('deactivated');
+    $(this).addClass('active');
+    $('#tab1').removeClass('active');
+    $('#tab3').removeClass('active');
+  });
+
+  $("#tab3").click(function() {
+    $('#image1').addClass('deactivated');
+    $('#image2').addClass('deactivated');
+    $('#image3').removeClass('deactivated');
+    $(this).addClass('active');
+    $('#tab1').removeClass('active');
+    $('#tab2').removeClass('active');
+  });
+</script>

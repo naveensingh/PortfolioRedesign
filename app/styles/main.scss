@@ -2,27 +2,44 @@ body {
   font-family: 'Merriweather', serif;
   -webkit-font-smoothing: antialiased;
   background: #f39c12;
+  line-height: 1.5;
 }
 a {
   text-decoration: none;
 
-  &hover {
+  &:hover {
     text-decoration: none;
   }
 }
 .text-center {
   text-align: center;
 }
-.main-intro .inner {
-  padding-top: 15%;
+hr {
+  border: 1px solid #fff;
 }
-.inner {
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.deactivated {
+  display: none;
+}
+.active {
+  display: block;
+}
+
+.clearfix:after {
+  clear: both;
+}
+.main-intro .home-inner {
+  padding-top: 15%;
   width: 80%;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.main-intro.home {
+.home, .about {
   color: #fff;
   h1 {
     border-top: 15px solid #000;
@@ -51,57 +68,74 @@ a {
     color: #fff;
   }
 }
-.about-inner {
-  background: #fff;
-  padding: 30px;
 
-  h2 {
-    padding-top: 10px;
-    border-top: 7.5px solid #000;
-    display: inline-block;
+.about .home-inner {
+  padding-top: 5%;
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  p {
+    font-weight: 400!important;
   }
-
 }
 
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: " ";
+.screens {
+  margin-top: 100px;
 }
-
-.clearfix:after {
-  clear: both;
-}
-.width-30 {
-  width: 30%;
-  float: left;
+.work-inner {
+  padding: 20px;
 }
 .width-70 {
   width: 70%;
   float: left;
-}
-
-.card {
-  .image {
-    border: 10px solid #ddd;
-  }
-
   img {
-    padding: 20px;
-    max-width: 80%;
+    max-width: 100%;
+  }
+  img.active {
+     display: block;
   }
 }
-.overlay-bg {
-  background: rgba(0,0,0,0.6);
+.width-30 {
+  width: 30%;
+  float: left;
+
+  h5 {
+    font-size: 1.7em;
+    margin: 5px 0;
+  }
+  .tab p {
+    font-size: 1.2em;
+  }
+  .tab {
+    cursor: pointer;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .tab.active {
+    opacity: 1;
+  }
 }
 
 
+@media (max-width: 1000px) {
+  .width-70, .width-30 {
+    width: 100%;
 
+    p {
+      display: none;
+    }
 
-
-
-
-
+    .tab {
+      display: inline;
+      float: left;
+      margin: 5px;
+    }
+  }
+}
 /* ========================================================================== */
 .menu-trigger {
   position: fixed;
@@ -303,44 +337,6 @@ a {
     left: 0;
   }
 }
-
-.main-intro {
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ========================================================================== */
 
 
